@@ -68,19 +68,17 @@ void freeList(struct ListNode* head){
 
 
 ListNode* reverseList(ListNode* head){
-  ListNode* current = head, *prev = NULL, *next;
-
+  ListNode* current = head;
+  ListNode* prev = NULL;
+  ListNode* next;
   while(current !=NULL){
     next = (*current).next;
     (*current).next = prev;
 
     prev = current;
     current = next;
-
-    
-     
+        
   }
-
   return prev;
 
 }

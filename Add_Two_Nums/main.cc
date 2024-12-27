@@ -46,47 +46,58 @@ int main(int argc, const char** argv) {
   (*second_second).next = second_tail;
 
 
-
-
-  fprintf(stdout, "Reversed First\n");
-  first_head = reverseList(first_head);
-  printList(first_head);
-
-
-
-  fprintf(stdout, "Reversed Seccond\n");
-  second_head = reverseList(second_head);
-  printList(second_head);
-
   
   // TODO Figure out why the first and last variables are dupilcating 
-  //
+  // FIXED Basiclly what was going on is that the last values where not
+  // changing correctly when I called it with .data I'm guessing this is because
+  // the last one still points to the NULL so it was tweaking out
 
- 
-  int x = (*second_head).data;
-  int y = (*second_second).data;
-  int z = (*second_tail).data;
-  fprintf(stdout, "%d\n", x);
+
+
+  int x = (*first_head).data;
+  int y = (*first_second).data;
+  int z = (*first_tail).data;
+  fprintf(stdout, "%d\n%d\n%d\n", x, y, z);
 
   
   fprintf(stdout, "%d\n", concatenate(x, y, z));
+   
+  printf("\n-----------------------------------\n");
+  
+  first_head = reverseList(first_head);
+  
+  printList(first_head);
 
+
+  
+  ListNode* temp = first_head;
+  while ((*temp).next != NULL) {
+    temp = (*temp).next;
+  }
+  first_tail = temp; // Now first_tail points to the actual tail of the reversed list
+
+  
+
+   x = (*first_head).data;          // First node in the reversed list
+   y = (*first_head->next).data;    // First node in the reversed list
+   z = (*first_tail).data;          // Last node in the reversed list
+
+
+  
+  
+  fprintf(stdout, "%d\n%d\n%d\n", x, y, z);
+  fprintf(stdout, "%d\n", concatenate(x, y, z));
+
+
+  
+  
+  
+  
   freeList(first_head);
   freeList(second_head);
-  /*  
-  fprintf(stdout, "First Linked List\n\n");
-  printList(first_head);
-  fprintf(stdout, "First_head: \n %d" ,(*first_head).data);
-
   
+ 
 
-
-  fprintf(stdout, "\n\n Second List\n\n");
-  printList(second_head);
-  
-
-  */
-  
   
   // Reversing the List
   //
