@@ -33,8 +33,13 @@ int main(int argc, const char** argv) {
   // }
 
   
-  empty_board();
-  fprintf(stdout, "It works");
+
+  int rows = 3;
+  int cols = 3;
+
+  Board array(rows, cols);
+
+  printBoard(array);
 
   //Return Gracefully
   //

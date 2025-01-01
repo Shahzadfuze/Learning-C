@@ -16,9 +16,25 @@
 
 
 
+
 using namespace std;
 
-void empty_board();
+struct Board{
+  char** data;
+  int rows;
+  int cols;
+
+
+  Board(int r, int c);
+
+
+  ~Board();
+
+};
+
+void printBoard(Board& array);
+
+
 
 
 // end of include file
