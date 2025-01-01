@@ -1,5 +1,5 @@
 // file: 
-//
+//;
 
 // make sure definitions are only made once
 //
