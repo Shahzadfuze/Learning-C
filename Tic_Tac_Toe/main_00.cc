@@ -65,7 +65,7 @@ char** empty_board(int rows, int cols){
   //
   for(int i = 0; i < rows; i++){
     for(int j = 0; j < cols;  j++){
-	  data[i][j] = ' ';
+	  data[i][j] = '+';
 
     }
   }
@@ -83,19 +83,32 @@ char** empty_board(int rows, int cols){
 
 
 
+// Changing A apart of the board with either an X or an O
+//
 
+void addBoard(Board& array, int row, int col, char value){
+  if(row >= array.rows || col >= array.cols || row < 0 || col < 0){
+    fprintf(stdout, "---------------------\n Please Input a avaliable space -------------------\n");
+    
+  }
+  else{
+  array.data[row][col] = value;
+  }
 
+}
 
 // Here we are using a reference to the struct which allows us to load it into
 // memoery without actually copying all the data over; aka more efficent;
 //
 
 void printBoard(Board& array){
+  fprintf(stdout, "\n--------------\n");
+
   for(int i = 0; i < array.rows; i++){
     for(int j = 0; j < array.cols; j++){
-      fprintf(stdout, "%c", array.data[i][j]);
+     fprintf(stdout, "%c", array.data[i][j]);
     }
     fprintf(stdout, "\n");
   }
-
+  fprintf(stdout, "\n--------------\n");
 }

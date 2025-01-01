@@ -41,6 +41,14 @@ int main(int argc, const char** argv) {
 
   printBoard(array);
 
+  addBoard(array, 1,2,'X');
+  addBoard(array, 1,1,'X');
+  printBoard(array);
+
+  
+  
+
+  
   //Return Gracefully
   //
   return 0;

@@ -33,7 +33,7 @@ struct Board{
 };
 
 void printBoard(Board& array);
-
+void addBoard(Board& array, int row, int col, char value);
 
 
 
