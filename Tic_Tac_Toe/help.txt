@@ -1,0 +1,21 @@
+ __   ___.--'_`.     .'_`--.___   __
+ ( _`.'. -   'o` )   ( 'o`   - .`.'_ )
+ _\.'_'      _.-'     `-._      `_`./_
+( \`. )    //\`         '/\\    ( .'/ )
+ \_`-'`---'\\__,       ,__//`---'`-'_/
+  \`        `-\         /-'        '/
+   `                               '
+   This is a tic-tac-toe game I made
+   You can press q to exit the game
+   any time to quit and using the
+   numbers 0-9 to chose which area
+   to place
+		+++
+		+++
+		+++
+   Place: 0, X
+		X++
+		+++
+		+++
+
+   As simple as that
