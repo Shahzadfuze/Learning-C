@@ -11,10 +11,6 @@
 //
 //
 
-
-
-
-
 int main(int argc, const char** argv) {
 
   // char board[3][3] = { {' ', ' ', ' '},
@@ -33,24 +29,32 @@ int main(int argc, const char** argv) {
   // }
 
   
-  if(argc != 2){
+  if(argc > 2){
     fprintf(stdout, "Please use the correct fomat %s -help\n", argv[0]);
     return 1;
   }
-  int rows = 3;
-  int cols = 3;
 
-  Board array(rows, cols);
-
-  printBoard(array);
-  // Now What I want to do is get inputs from the terminal weather it be q to exit or the number they want the X or O to be in
-  //
-  addBoard(array, 1,2,'X');
-  addBoard(array, 1,1,'O');
-  printBoard(array);
+  if(argc > 1 && strcmp(argv[1], "-help") == 0){
+    printHelp();
+    return 1;
+  }
 
   
+  // int rows = 3;
+  // int cols = 3;
+
+  // Board array(rows, cols);
+
+
+  // // Now What I want to do is get inputs from the terminal weather it be q to exit or the number they want the X or O to be in
+  // //
+  // // addBoard(array, 1,2,'X');
+  // // addBoard(array, 1,1,'O');
+  // // printBoard(array);
+
+  // printBoard(array);
   
+
 
 
 

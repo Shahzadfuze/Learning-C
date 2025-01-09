@@ -57,18 +57,17 @@ char** empty_board(int rows, int cols){
     data = new char*[rows];
     for(int i = 0; i < rows; i++){
       data[i] = new char [cols];
-
     }
 
-
-  // Creating empty 3x3 array;
-  //
-  for(int i = 0; i < rows; i++){
-    for(int j = 0; j < cols;  j++){
-	  data[i][j] = '+';
-
+    int count = 0;    
+    // Creating empty 3x3 array;
+    //
+    for(int i = 0; i < rows; i++){
+      for(int j = 0; j < cols;  j++){
+	data[i][j] = '+';
+	count++;
+      }
     }
-  }
   }
 
   
@@ -111,4 +110,22 @@ void printBoard(Board& array){
     fprintf(stdout, "\n");
   }
   fprintf(stdout, "\n--------------\n");
+}
+
+
+void printHelp(){
+  
+  std::ifstream file("help.txt");
+
+  if(file.is_open()){
+    std::string line;
+    while(std::getline(file, line)){
+      fprintf(stdout, "%s\n", line.c_str());
+    }
+    file.close();
+  }
+  else{
+    fprintf(stdout, "Error help.txt is not located in the directory\n");
+    
+  }  
 }

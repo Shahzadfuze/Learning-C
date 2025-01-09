@@ -13,6 +13,7 @@
 #include <string.h>
 #include <math.h>
 #include <iostream>
+#include <fstream>
 
 
 
@@ -35,6 +36,7 @@ struct Board{
 void printBoard(Board& array);
 void addBoard(Board& array, int row, int col, char value);
 
+void printHelp();
 
 
 // end of include file
