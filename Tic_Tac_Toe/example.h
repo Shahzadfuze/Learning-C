@@ -20,6 +20,13 @@
 
 using namespace std;
 
+
+#define SWITCH_PLAYER(player) \
+  if (player == 'X') player = 'O'; \
+  else player = 'X';
+
+
+
 struct Board{
   char** data;
   int rows;
