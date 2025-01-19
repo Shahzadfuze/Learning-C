@@ -22,7 +22,6 @@
 using namespace std;
 
 
-
 #define SWITCH_PLAYER(player) \
   if (player == 'X') player = 'O'; \
   else player = 'X';
