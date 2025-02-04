@@ -18,14 +18,14 @@ int main(int argc, const char** argv) {
 
   p1.set_name("Fize");
 
-  p1.display();
+  
 
   person p2;
   p2.set_name("Mason");
   person p3("Goose");
   person p4("Gotmilk");
+  person p5("HTTW");
   
-  p2.display();
 
   person* BrackAsians[5];
 
@@ -33,7 +33,7 @@ int main(int argc, const char** argv) {
   BrackAsians[1] = &p2;
   BrackAsians[2] = &p3;
   BrackAsians[3] = &p4;
-
+  BrackAsians[4] = &p5;
 
   for(int i = 0; i < 5; i++){
     BrackAsians[i]->display();

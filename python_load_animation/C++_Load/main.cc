@@ -17,19 +17,19 @@
 int main(int argc, const char** argv) {
 
   char ascii_art[] = 
-  "              / _)\n"
-  "     _.----._/ /\n"
-  "    /         /\n"
-  " __/ (  | (  |\n"
-  "/__.-'|_|--|_|\n";
+  "                     / _)\n"
+  "            _.----._/ /\n"
+  "           /         /\n"
+  "        __/ (  | (  |\n"
+  "       /__.-'|_|--|_|\n";
 
   signal(SIGINT, handle_signal);
 
-  cout << "Press C+c to stop\n";
+  cout << "Press C+c to stop Jerald v\n\n";
 
-  printf("%s", ascii_art);
+  printf("\n%s\n", ascii_art);
   
-  dots_loading("Fuzing");
+  dots_loading("       Fuzing");
 
   cout << "DONE" << endl;
 

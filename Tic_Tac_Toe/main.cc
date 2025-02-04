@@ -71,7 +71,7 @@ int main(int argc, const char** argv) {
     cin >> input;
     
     if(input == 'q'){
-      fprintf(stdout, "Bye Bye");
+      fprintf(stdout, "Bye Bye\n");
       break;
     }
 
